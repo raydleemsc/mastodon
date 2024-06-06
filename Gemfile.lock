@@ -105,6 +105,7 @@ GEM
       aws-sigv4 (~> 1.4)
     aws-sigv4 (1.5.0)
       aws-eventstream (~> 1, >= 1.0.2)
+    base64 (0.2.0)
     bcrypt (3.1.17)
     better_errors (2.9.1)
       coderay (>= 1.0.0)
@@ -129,7 +130,7 @@ GEM
     brpoplpush-redis_script (0.1.2)
       concurrent-ruby (~> 1.0, >= 1.0.5)
       redis (>= 1.0, <= 5.0)
-    builder (3.2.4)
+    builder (3.3.0)
     bullet (7.0.3)
       activesupport (>= 3.0.0)
       uniform_notifier (~> 1.11)
@@ -174,7 +175,7 @@ GEM
     cocoon (1.2.15)
     coderay (1.1.3)
     color_diff (0.1)
-    concurrent-ruby (1.1.10)
+    concurrent-ruby (1.3.1)
     connection_pool (2.3.0)
     cose (1.2.1)
       cbor (~> 0.5.9)
@@ -223,7 +224,7 @@ GEM
       faraday (~> 1)
       multi_json
     encryptor (3.0.0)
-    erubi (1.11.0)
+    erubi (1.12.0)
     et-orbi (1.2.7)
       tzinfo
     excon (0.76.0)
@@ -312,7 +313,7 @@ GEM
     httplog (1.6.0)
       rack (>= 2.0)
       rainbow (>= 2.0.0)
-    i18n (1.12.0)
+    i18n (1.14.5)
       concurrent-ruby (~> 1.0)
     i18n-tasks (1.0.12)
       activesupport (>= 4.0.2)
@@ -382,9 +383,9 @@ GEM
       activesupport (>= 4)
       railties (>= 4)
       request_store (~> 1.0)
-    loofah (2.19.0)
+    loofah (2.22.0)
       crass (~> 1.0.2)
-      nokogiri (>= 1.5.9)
+      nokogiri (>= 1.12.0)
     mail (2.7.1)
       mini_mime (>= 0.1.1)
     makara (0.5.1)
@@ -402,8 +403,8 @@ GEM
       mime-types-data (~> 3.2015)
     mime-types-data (3.2022.0105)
     mini_mime (1.1.2)
-    mini_portile2 (2.8.0)
-    minitest (5.16.3)
+    mini_portile2 (2.8.7)
+    minitest (5.23.1)
     msgpack (1.5.4)
     multi_json (1.15.0)
     multipart-post (2.1.1)
@@ -412,7 +413,7 @@ GEM
       net-ssh (>= 2.6.5, < 8.0.0)
     net-ssh (7.0.1)
     nio4r (2.5.8)
-    nokogiri (1.13.8)
+    nokogiri (1.13.10)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     nsa (0.2.8)
@@ -482,8 +483,8 @@ GEM
     pundit (2.2.0)
       activesupport (>= 3.0.0)
     raabro (1.4.0)
-    racc (1.6.0)
-    rack (2.2.4)
+    racc (1.8.0)
+    rack (2.2.9)
     rack-attack (6.6.1)
       rack (>= 1.0, < 3)
     rack-cors (1.1.1)
@@ -496,7 +497,7 @@ GEM
       rack (>= 2.1.0)
     rack-proxy (0.7.0)
       rack
-    rack-test (2.0.2)
+    rack-test (2.1.0)
       rack (>= 1.3)
     rails (6.1.7)
       actioncable (= 6.1.7)
@@ -517,11 +518,12 @@ GEM
       actionpack (>= 5.0.1.rc1)
       actionview (>= 5.0.1.rc1)
       activesupport (>= 5.0.1.rc1)
-    rails-dom-testing (2.0.3)
-      activesupport (>= 4.2.0)
+    rails-dom-testing (2.2.0)
+      activesupport (>= 5.0.0)
+      minitest
       nokogiri (>= 1.6)
-    rails-html-sanitizer (1.4.3)
-      loofah (~> 2.3)
+    rails-html-sanitizer (1.5.0)
+      loofah (~> 2.19, >= 2.19.1)
     rails-i18n (6.0.0)
       i18n (>= 0.7, < 2)
       railties (>= 6.0.0, < 7)
@@ -637,12 +639,13 @@ GEM
     simplecov-html (0.12.3)
     simplecov_json_formatter (0.1.2)
     smart_properties (1.17.0)
-    sprockets (3.7.2)
+    sprockets (3.7.3)
+      base64
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
-    sprockets-rails (3.4.2)
-      actionpack (>= 5.2)
-      activesupport (>= 5.2)
+    sprockets-rails (3.5.0)
+      actionpack (>= 6.1)
+      activesupport (>= 6.1)
       sprockets (>= 3.0.0)
     sshkit (1.21.2)
       net-scp (>= 1.1.2)
@@ -680,7 +683,7 @@ GEM
     twitter-text (3.1.0)
       idn-ruby
       unf (~> 0.1.0)
-    tzinfo (2.0.5)
+    tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     tzinfo-data (1.2022.4)
       tzinfo (>= 1.0.0)
@@ -725,7 +728,7 @@ GEM
     xorcist (1.1.3)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (2.6.0)
+    zeitwerk (2.6.15)
 
 PLATFORMS
   ruby
@@ -841,7 +844,7 @@ DEPENDENCIES
   simple_form (~> 5.1)
   simplecov (~> 0.21)
   sprockets (~> 3.7.2)
-  sprockets-rails (~> 3.4)
+  sprockets-rails (~> 3.5, >= 3.5.0)
   stackprof
   stoplight (~> 3.0.0)
   strong_migrations (~> 0.7)
@@ -854,3 +857,9 @@ DEPENDENCIES
   webpacker (~> 5.4)
   webpush!
   xorcist (~> 1.1)
+
+RUBY VERSION
+   ruby 2.6.6p146
+
+BUNDLED WITH
+   1.17.3
